@@ -13,7 +13,9 @@ namespace Sample.Mac
 
 			IView content = app.CreateView();
 
-			View = content.ToNative();
+			NSView view = content.ToNative();
+
+			View = view;
 		}
 
 		public override NSObject RepresentedObject
