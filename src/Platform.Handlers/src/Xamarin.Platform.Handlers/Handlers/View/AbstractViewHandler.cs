@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-
-#if __IOS__
+﻿#if __IOS__
 using NativeView = UIKit.UIView;
 #elif __MACOS__
 using NativeView = AppKit.NSView;
@@ -32,11 +30,9 @@ namespace Xamarin.Platform.Handlers
 
 		protected abstract TNativeView CreateView();
 
-		[MaybeNull, AllowNull]
 		protected TNativeView TypedNativeView { get; private set; } = default!;
 
-		[MaybeNull, AllowNull]
-		protected TVirtualView VirtualView { get; private set; } = default!;
+		protected TVirtualView? VirtualView { get; private set; } = default!;
 
 		public NativeView? View => TypedNativeView;
 

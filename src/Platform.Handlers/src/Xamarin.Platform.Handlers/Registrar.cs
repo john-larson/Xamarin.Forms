@@ -94,7 +94,7 @@ namespace Xamarin.Platform
 
 		TTypeRender GetRenderer(Type t)
 		{
-			if (!_handler.TryGetValue(t, out var renderer))
+			if (!_handler.TryGetValue(t, out var handler))
 				return default!;
 			try
 			{
