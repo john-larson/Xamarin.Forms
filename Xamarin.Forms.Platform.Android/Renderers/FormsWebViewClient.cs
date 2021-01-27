@@ -51,7 +51,6 @@ namespace Xamarin.Forms.Platform.Android
 			}
 			else
 			{
-				_navigationResult = WebNavigationResult.Success;
 				base.OnPageStarted(view, url, favicon);
 			}
 		}
